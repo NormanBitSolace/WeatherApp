@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gia-6D-g2L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="dxd-dY-bC6">
+            <objects>
+                <viewController id="gia-6D-g2L" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwE-3g-P7i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-Lh-I6t">
+                                <rect key="frame" x="37.5" y="251.5" width="300" height="184"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloudy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-1o-Rdf">
+                                        <rect key="frame" x="125.5" y="87" width="49" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ri7-AM-Ssl">
+                                        <rect key="frame" x="125" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="EqJ-S2-N3G"/>
+                                            <constraint firstAttribute="height" constant="50" id="Upe-MQ-RlT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santa Monica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8g-3j-Y2v">
+                                        <rect key="frame" x="96" y="58" width="108" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S61-oD-Kfj">
+                                        <rect key="frame" x="98" y="113" width="104" height="77"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aNL-1o-Rdf" firstAttribute="centerX" secondItem="0y5-Lh-I6t" secondAttribute="centerX" id="Dti-GP-tr1"/>
+                                    <constraint firstItem="L8g-3j-Y2v" firstAttribute="top" secondItem="Ri7-AM-Ssl" secondAttribute="bottom" constant="8" id="FGN-QN-hhe"/>
+                                    <constraint firstAttribute="height" constant="184" id="LRw-bH-BPN"/>
+                                    <constraint firstItem="S61-oD-Kfj" firstAttribute="top" secondItem="aNL-1o-Rdf" secondAttribute="bottom" constant="8" id="Noe-Yh-h76"/>
+                                    <constraint firstItem="S61-oD-Kfj" firstAttribute="centerX" secondItem="0y5-Lh-I6t" secondAttribute="centerX" id="Pdx-vg-E5H"/>
+                                    <constraint firstItem="L8g-3j-Y2v" firstAttribute="centerX" secondItem="0y5-Lh-I6t" secondAttribute="centerX" id="bvK-oe-yZk"/>
+                                    <constraint firstItem="Ri7-AM-Ssl" firstAttribute="centerX" secondItem="0y5-Lh-I6t" secondAttribute="centerX" id="ds1-NG-ihi"/>
+                                    <constraint firstItem="Ri7-AM-Ssl" firstAttribute="top" secondItem="0y5-Lh-I6t" secondAttribute="top" id="fHU-1Y-hIZ"/>
+                                    <constraint firstItem="aNL-1o-Rdf" firstAttribute="top" secondItem="L8g-3j-Y2v" secondAttribute="bottom" constant="8" id="kD0-RO-3B6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0y5-Lh-I6t" firstAttribute="centerX" secondItem="ziv-De-hKa" secondAttribute="centerX" id="UTG-tz-8Vm"/>
+                            <constraint firstItem="0y5-Lh-I6t" firstAttribute="centerY" secondItem="ziv-De-hKa" secondAttribute="centerY" id="Z2g-z9-upA"/>
+                            <constraint firstItem="0y5-Lh-I6t" firstAttribute="width" secondItem="pwE-3g-P7i" secondAttribute="width" multiplier="8/10" id="g0N-Yk-70O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ziv-De-hKa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="My2-l2-1T4"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="L8g-3j-Y2v" id="EZt-OV-9KJ"/>
+                        <outlet property="conditionLabel" destination="aNL-1o-Rdf" id="0Hc-N9-PHj"/>
+                        <outlet property="imageView" destination="Ri7-AM-Ssl" id="1ky-Gg-9H0"/>
+                        <outlet property="temperatureLabel" destination="S61-oD-Kfj" id="DfP-oH-NK3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvL-om-Klb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152.8" y="178.56071964017991"/>
+        </scene>
+    </scenes>
+</document>
