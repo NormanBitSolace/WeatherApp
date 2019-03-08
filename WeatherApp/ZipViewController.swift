@@ -1,7 +1,7 @@
 import UIKit
 
 protocol ZipViewControllerDelegate: class {
-    func zipEntered(zipString: String?)
+    func zipCodeEntered(zipString: String?)
 }
 
 protocol FavoritesMenuDelegate: class {
@@ -23,7 +23,7 @@ final class ZipViewController: UIViewController {
          check if too many numbers
          else valid zip code
          */
-        delegate.zipEntered(zipString: textField.text)
+        delegate.zipCodeEntered(zipString: textField.text)
     }
     @IBAction func favoritesTap(_ sender: Any) {
         guard let delegate = delegate else { preconditionFailure("App assumes delegate is set.") }

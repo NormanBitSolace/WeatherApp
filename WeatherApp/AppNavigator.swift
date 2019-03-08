@@ -18,7 +18,7 @@ final class AppNavigator: Navigator {
             vc.popoverPresentationController?.permittedArrowDirections = .up
             vc.menuChoice = { choice in
                 vc.dismiss(animated: true) {
-                    delegate.zipEntered(zipString: choice)
+                    delegate.zipCodeEntered(zipString: choice)
                 }
             }
         }

@@ -22,11 +22,11 @@ enum ZipCodeValidator: Equatable, CustomStringConvertible {
 
     static func state(zipString: String?) -> ZipCodeValidator {
         guard let text = zipString else { return .noText }
-        guard text.count != 0 else { return .noText }
         guard let zipCode = Int(text) else { return .invalidCharacters }
         guard text.count == 5 else {
             if text.count < 5 { return .tooFewNumbers } else { return .tooManyNumbers }
         }
+        guard text.count != 0 else { return .noText }
         return .valid(zipCode)
     }
 }

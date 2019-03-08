@@ -15,9 +15,9 @@ final class AppCoordinator: NSObject {
     }
 }
 
-extension AppCoordinator: ZipViewControllerDelegate {   // MARK: ZipViewControllerDelegate
+extension AppCoordinator: ZipViewControllerDelegate {    // MARK: ZipViewControllerDelegate
 
-    func zipEntered(zipString: String?) {
+    func zipCodeEntered(zipString: String?) {
         let result = ZipCodeValidator.state(zipString: zipString)
         switch result {
         case .noText, .tooFewNumbers, .tooManyNumbers, .invalidCharacters:
@@ -58,6 +58,6 @@ extension AppCoordinator: FavoritesMenuDelegate {
     }
 
     func favoritePicked(_ zipString: String) {
-        zipEntered(zipString: zipString)
+        zipCodeEntered(zipString: zipString)
     }
 }
